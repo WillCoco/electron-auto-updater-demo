@@ -1,6 +1,6 @@
 # electron-auto-updater-dome
 
-macOS平台需要用开发者账号签名, 本dome未签名. mac下不能自动更新.
+macOS平台需要用开发者账号签名, 本demo未签名. mac下不能自动更新.
 
 
 1. 默认的远程更新仓库信息会从 `.git/config` 中获取，如果要修改的化可以修改`package.json`
