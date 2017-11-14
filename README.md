@@ -2,7 +2,7 @@
 
 macOS平台需要用开发者账号签名, 本demo未签名. mac下不能自动更新.
 
-
+下载DEMO测试：[V1.0.0 32位](https://github.com/WillCoco/electron-auto-updater-demo/releases/download/v1.0.0/electron-auto-updater-dome-setup-1.0.0.exe), 64位的需要自己打包
 1. 默认的远程更新仓库信息会从 `.git/config` 中获取，如果要修改的化可以修改`package.json`
 
         {
