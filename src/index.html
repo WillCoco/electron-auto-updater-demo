@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="cleanUI">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*" />-->
+    <title>electron-auto-updater-dome</title>
+</head>
+<body>
+    <h1>查看右侧开发者console</h1>
+</body>
+<script>
+    const ipcRenderer = require('electron').ipcRenderer;
+
+    ipcRenderer.on('tocheck', function(event, arg) {
+      console.log('当前版本:', arg, ', go check...')
+    });
+
+    ipcRenderer.on('update_available', function(event, arg) {
+      console.log('检查是否有更新:', arg)
+    });
+
+    ipcRenderer.on('loading', function(event, arg) {
+      console.log('下载进度:', arg); // prints "pong"
+    });
+
+    ipcRenderer.on('error', function(event, arg) {
+      console.log('发生error:', arg); // prints "pong"
+    });
+</script>
+</html>
